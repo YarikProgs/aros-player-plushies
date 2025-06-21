@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "app"
+version = "${version}"
+displayName = "Aros' Player Plushies"
+authors = ["Aros"]
+description = ""
+#logoFile = ""
+
+[[dependencies.app]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.app]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "app.mixins.json"
