@@ -1,0 +1,7 @@
+{
+  "parent": "app:block/template/player_plushie_slim",
+  "textures": {
+    "plush": "app:item/skins/ienumerable",
+    "particle": "app:item/skins/ienumerable"
+  }
+}

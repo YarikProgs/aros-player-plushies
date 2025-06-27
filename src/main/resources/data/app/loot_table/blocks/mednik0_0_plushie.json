@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "app:mednik0_0_plushie"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "app:blocks/mednik0_0_plushie"
+}

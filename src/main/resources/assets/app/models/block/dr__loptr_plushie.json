@@ -1,0 +1,7 @@
+{
+  "parent": "app:block/template/player_plushie",
+  "textures": {
+    "plush": "app:item/skins/dr__loptr",
+    "particle": "app:item/skins/dr__loptr"
+  }
+}

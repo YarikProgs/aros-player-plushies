@@ -1,0 +1,7 @@
+{
+  "parent": "app:block/template/player_plushie",
+  "textures": {
+    "plush": "app:item/skins/aken_yt",
+    "particle": "app:item/skins/aken_yt"
+  }
+}

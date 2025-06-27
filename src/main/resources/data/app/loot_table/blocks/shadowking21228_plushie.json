@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "app:shadowking21228_plushie"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "app:blocks/shadowking21228_plushie"
+}

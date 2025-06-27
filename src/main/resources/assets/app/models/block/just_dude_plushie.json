@@ -1,0 +1,7 @@
+{
+  "parent": "app:block/template/player_plushie",
+  "textures": {
+    "plush": "app:item/skins/just_dude",
+    "particle": "app:item/skins/just_dude"
+  }
+}

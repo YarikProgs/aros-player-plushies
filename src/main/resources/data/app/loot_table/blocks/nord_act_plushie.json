@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "app:nord_act_plushie"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "app:blocks/nord_act_plushie"
+}

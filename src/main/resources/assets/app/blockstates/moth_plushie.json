@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "app:block/moth_plushie"
+    },
+    "facing=east": {
+      "model": "app:block/moth_plushie",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "app:block/moth_plushie",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "app:block/moth_plushie",
+      "y": 270
+    }
+  }
+}
