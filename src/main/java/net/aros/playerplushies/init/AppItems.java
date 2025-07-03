@@ -4,7 +4,6 @@ import com.mojang.serialization.Codec;
 import net.aros.playerplushies.item.CollectorsHandItem;
 import net.aros.playerplushies.item.PlushieBoxItem;
 import net.minecraft.component.ComponentType;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.network.codec.PacketCodecs;
@@ -12,8 +11,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,7 +20,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static net.aros.playerplushies.ArosPlayerPlushies.MOD_ID;
@@ -57,7 +55,9 @@ public class AppItems {
                     .findFirst().orElseThrow().get().getDefaultStack()
             )
             .entries((params, output) -> {
-                output.add(PLUSHIE_BOX.toStack());
+                for (Identifier category : CATEGORIES)
+                    output.add(Util.make(PLUSHIE_BOX.toStack(), stack -> stack.set(BOX_TYPE, category)));
+
                 output.add(COLLECTORS_HAND.toStack());
                 ADD_TO_GROUP.forEach(output::add);
             })
