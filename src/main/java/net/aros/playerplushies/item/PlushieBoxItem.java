@@ -1,14 +1,14 @@
 package net.aros.playerplushies.item;
 
 import net.aros.playerplushies.client.renderer.PlushieBoxItemRenderer;
-import net.aros.playerplushies.init.AppBlocks;
 import net.aros.playerplushies.init.AppItems;
+import net.aros.playerplushies.loader.PlushieSet;
+import net.aros.playerplushies.loader.PlushiesLoader;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -16,15 +16,14 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.Util;
+import net.minecraft.util.*;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -35,29 +34,24 @@ import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 import static net.aros.playerplushies.ArosPlayerPlushies.MOD_ID;
 
 public class PlushieBoxItem extends Item implements GeoItem {
+    public static final Identifier DEFAULT_TYPE = Identifier.of(MOD_ID, "overworld");
     private static final RawAnimation REVEAL = RawAnimation.begin().thenPlayAndHold("reveal");
     public static final int REVEALING_TIME = 4 * SharedConstants.TICKS_PER_SECOND;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public PlushieBoxItem(Settings settings) {
-        super(settings.maxCount(1).fireproof().component(AppItems.BOX_TYPE, "overworld"));
+    public PlushieBoxItem(@NotNull Settings settings) {
+        super(settings.maxCount(1).fireproof().component(AppItems.BOX_TYPE, DEFAULT_TYPE));
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
-    public static ItemStack getRandomStack() {
-        return Util.make(AppItems.PLUSHIE_BOX.toStack(), stack -> {
-            List<String> categories = new ArrayList<>(AppBlocks.PLAYER_CATEGORIES.keySet());
-            Collections.shuffle(categories);
-            stack.set(AppItems.BOX_TYPE, categories.getFirst());
-        });
+    public static ItemStack getRandomStack(Random random) {
+        return Util.make(AppItems.PLUSHIE_BOX.toStack(), stack -> stack.set(AppItems.BOX_TYPE, AppItems.CATEGORIES.get(random.nextInt(AppItems.CATEGORIES.size()))));
     }
 
     @Override
@@ -71,11 +65,14 @@ public class PlushieBoxItem extends Item implements GeoItem {
     }
 
     private void reveal(ServerPlayerEntity user, @NotNull ItemStack stack) {
-        String name = stack.get(AppItems.NICKNAME);
+        Identifier name = stack.get(AppItems.NICKNAME);
         stack.remove(AppItems.REVEALING.get());
         stack.decrement(1);
-        ItemHandlerHelper.giveItemToPlayer(user,
-                new ItemStack(Registries.ITEM.get(Identifier.of(MOD_ID, name + "_plushie"))));
+        if (name == null || !Registries.ITEM.containsId(name.withSuffixedPath("_plushie"))) {
+            user.sendMessage(Text.translatable(getTranslationKey() + ".fail").formatted(Formatting.GRAY));
+            return;
+        }
+        ItemHandlerHelper.giveItemToPlayer(user, new ItemStack(Registries.ITEM.get(name.withSuffixedPath("_plushie"))));
     }
 
     @Override
@@ -85,7 +82,7 @@ public class PlushieBoxItem extends Item implements GeoItem {
             //noinspection DataFlowIssue
             int time = stack.get(AppItems.REVEALING);
             if ((float) time <= REVEALING_TIME / 4f && !stack.contains(AppItems.NICKNAME.get())) {
-                stack.set(AppItems.NICKNAME, chooseRandomPlayer(world, stack.getOrDefault(AppItems.BOX_TYPE, "overworld")));
+                stack.set(AppItems.NICKNAME, chooseRandomPlayer(user.getRandom(), stack.getOrDefault(AppItems.BOX_TYPE, DEFAULT_TYPE)));
                 user.playSoundToPlayer(SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.BLOCKS, 1, 1);
             }
             if (time > 0) {
@@ -97,9 +94,13 @@ public class PlushieBoxItem extends Item implements GeoItem {
     }
 
 
-    private String chooseRandomPlayer(@NotNull WorldAccess world, String category) {
-        List<String> players = AppBlocks.PLAYER_CATEGORIES.getOrDefault(category, List.of("aros"));
-        return players.get(world.getRandom().nextInt(players.size()));
+    @Contract("_, null -> null; null, _ -> fail")
+    private @Nullable Identifier chooseRandomPlayer(Random random, Identifier category) {
+        for (PlushieSet set : PlushiesLoader.INSTANCE.getPlushieSets()) {
+            if (Objects.equals(set.category(), category))
+                return set.plushies().get(random.nextInt(set.plushies().size()));
+        }
+        return null;
     }
 
     @Override
@@ -134,6 +135,6 @@ public class PlushieBoxItem extends Item implements GeoItem {
 
     @Override
     public Text getName(ItemStack stack) {
-        return Text.translatable(getTranslationKey(), Text.translatable("boxtype." + MOD_ID + "." + stack.getOrDefault(AppItems.BOX_TYPE, "overworld")));
+        return Text.translatable(getTranslationKey(), Text.translatable(stack.getOrDefault(AppItems.BOX_TYPE, DEFAULT_TYPE).toTranslationKey("boxtype")));
     }
 }

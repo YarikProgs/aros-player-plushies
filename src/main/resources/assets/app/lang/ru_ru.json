@@ -63,6 +63,7 @@
   "block.app.dmh_plushie": "Плюшка \"_DMH_\"",
   "item.app.plushie_box": "Бокс с плюшкой: %s",
   "item.app.collectors_hand": "Длань коллекционера",
+  "item.app.plushie_box.fail": "Бокс был пуст...",
   "item.app.collectors_hand.desc1": "Символ истинного любителя мягких игрушек",
   "item.app.collectors_hand.desc2": "♦ При убийстве мобов с шансом в 50% даёт случайный бокс",
   "desc.app.plushie": "Из категории: %s",
