@@ -12,8 +12,7 @@
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/block/white_wool.png"
+    "hidden": false
   },
   "criteria": {
     "plushie": {
@@ -94,5 +93,5 @@
       "plushie"
     ]
   ],
-  "sends_telemetry_event": false
+  "parent": "minecraft:story/mine_diamond"
 }
