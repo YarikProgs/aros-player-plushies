@@ -8,6 +8,8 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoRenderer;
 
+import java.util.Objects;
+
 import static net.aros.playerplushies.ArosPlayerPlushies.MOD_ID;
 
 public class PlushieBoxItemModel extends DefaultedItemGeoModel<PlushieBoxItem> {
@@ -17,10 +19,10 @@ public class PlushieBoxItemModel extends DefaultedItemGeoModel<PlushieBoxItem> {
 
     @Override
     public Identifier getTextureResource(PlushieBoxItem animatable, @Nullable GeoRenderer<PlushieBoxItem> renderer) {
-        String type = !(renderer instanceof PlushieBoxItemRenderer r) || !r.getCurrentItemStack().contains(AppItems.BOX_TYPE.get())
-                ? "overworld"
-                : r.getCurrentItemStack().get(AppItems.BOX_TYPE);
+        Identifier type = !(renderer instanceof PlushieBoxItemRenderer r) || !r.getCurrentItemStack().contains(AppItems.BOX_TYPE.get())
+                ? PlushieBoxItem.DEFAULT_TYPE
+                : Objects.requireNonNullElse(r.getCurrentItemStack().get(AppItems.BOX_TYPE), PlushieBoxItem.DEFAULT_TYPE);
 
-        return Identifier.of(MOD_ID, "textures/item/boxes/" + type + ".png");
+        return type.withPath("textures/item/boxes/" + type.getPath() + ".png");
     }
 }

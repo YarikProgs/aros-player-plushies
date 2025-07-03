@@ -62,6 +62,7 @@
   "block.app.ysh_plushie": "\"ysh\" plushie",
   "block.app.dmh_plushie": "\"_DMH_\" plushie",
   "item.app.plushie_box": "Box with plushie: %s",
+  "item.app.plushie_box.fail": "Box was empty...",
   "item.app.collectors_hand": "Collector's hand",
   "item.app.collectors_hand.desc1": "The symbol of a true soft toy lover",
   "item.app.collectors_hand.desc2": "♦ Killing mobs with a 50% chance will give you a random box",
