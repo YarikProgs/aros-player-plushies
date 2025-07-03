@@ -62,12 +62,15 @@
   "block.app.ysh_plushie": "Плюшка \"ysh\"",
   "block.app.dmh_plushie": "Плюшка \"_DMH_\"",
   "item.app.plushie_box": "Бокс с плюшкой: %s",
+  "item.app.collectors_hand": "Длань коллекционера",
+  "item.app.collectors_hand.desc1": "Символ истинного любителя мягких игрушек",
+  "item.app.collectors_hand.desc2": "♦ При убийстве мобов с шансом в 50% даёт случайный бокс",
   "desc.app.plushie": "Из категории: %s",
-  "boxtype.app.aether": "Рай",
+  "boxtype.app.aether": "Свет",
   "boxtype.app.bumble": "Мёд",
-  "boxtype.app.nether": "Незер",
+  "boxtype.app.nether": "Огонь",
   "boxtype.app.overworld": "Стандарт",
   "boxtype.app.starlight": "Звёзды",
   "boxtype.app.twilight": "Сумерки",
-  "boxtype.app.under": "Глушь"
+  "boxtype.app.under": "Шелест"
 }

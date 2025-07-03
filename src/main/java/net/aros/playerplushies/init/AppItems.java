@@ -1,6 +1,7 @@
 package net.aros.playerplushies.init;
 
 import com.mojang.serialization.Codec;
+import net.aros.playerplushies.item.CollectorsHandItem;
 import net.aros.playerplushies.item.PlushieBoxItem;
 import net.aros.playerplushies.item.PlushieItem;
 import net.minecraft.component.ComponentType;
@@ -38,6 +39,7 @@ public class AppItems {
     }
 
     public static final DeferredItem<PlushieBoxItem> PLUSHIE_BOX = ITEMS.registerItem("plushie_box", PlushieBoxItem::new);
+    public static final DeferredItem<CollectorsHandItem> COLLECTORS_HAND = ITEMS.registerItem("collectors_hand", CollectorsHandItem::new);
 
     public static final DeferredHolder<ItemGroup, ItemGroup> PLUSHIES_GROUP = GROUPS.register("plushies", () -> ItemGroup
             .builder()

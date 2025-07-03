@@ -8,6 +8,7 @@ import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -18,6 +19,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.Util;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
@@ -33,6 +35,8 @@ import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -46,6 +50,14 @@ public class PlushieBoxItem extends Item implements GeoItem {
     public PlushieBoxItem(Settings settings) {
         super(settings.maxCount(1).fireproof().component(AppItems.BOX_TYPE, "overworld"));
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
+    }
+
+    public static ItemStack getRandomStack() {
+        return Util.make(AppItems.PLUSHIE_BOX.toStack(), stack -> {
+            List<String> categories = new ArrayList<>(AppBlocks.PLAYER_CATEGORIES.keySet());
+            Collections.shuffle(categories);
+            stack.set(AppItems.BOX_TYPE, categories.getFirst());
+        });
     }
 
     @Override

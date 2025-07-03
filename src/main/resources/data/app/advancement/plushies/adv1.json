@@ -1,0 +1,814 @@
+{
+  "display": {
+    "title": "Истинный Плюшкин",
+    "description": "Соберите всю коллекцию",
+    "icon": {
+      "id": "app:plushie_box"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "8sixik_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:8sixik_plushie"
+          }
+        ]
+      }
+    },
+    "aken_yt_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:aken_yt_plushie"
+          }
+        ]
+      }
+    },
+    "allman_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:allman_plushie"
+          }
+        ]
+      }
+    },
+    "apelsintony_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:apelsintony_plushie"
+          }
+        ]
+      }
+    },
+    "arisa_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:arisa_plushie"
+          }
+        ]
+      }
+    },
+    "aros_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:aros_plushie"
+          }
+        ]
+      }
+    },
+    "ballast_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:ballast_plushie"
+          }
+        ]
+      }
+    },
+    "ctotoh_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:ctotoh_plushie"
+          }
+        ]
+      }
+    },
+    "dago_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dago_plushie"
+          }
+        ]
+      }
+    },
+    "dish_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dish_plushie"
+          }
+        ]
+      }
+    },
+    "dr__loptr_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dr__loptr_plushie"
+          }
+        ]
+      }
+    },
+    "dushnila_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dushnila_plushie"
+          }
+        ]
+      }
+    },
+    "dylorix24_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dylorix24_plushie"
+          }
+        ]
+      }
+    },
+    "elifian_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:elifian_plushie"
+          }
+        ]
+      }
+    },
+    "faldoor_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:faldoor_plushie"
+          }
+        ]
+      }
+    },
+    "faorum_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:faorum_plushie"
+          }
+        ]
+      }
+    },
+    "gemesfoxes_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:gemesfoxes_plushie"
+          }
+        ]
+      }
+    },
+    "ienumerable_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:ienumerable_plushie"
+          }
+        ]
+      }
+    },
+    "justrius_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:justrius_plushie"
+          }
+        ]
+      }
+    },
+    "just_dude_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:just_dude_plushie"
+          }
+        ]
+      }
+    },
+    "kirilla39_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:kirilla39_plushie"
+          }
+        ]
+      }
+    },
+    "klaqbi_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:klaqbi_plushie"
+          }
+        ]
+      }
+    },
+    "kriptor71_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:kriptor71_plushie"
+          }
+        ]
+      }
+    },
+    "kseouse_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:kseouse_plushie"
+          }
+        ]
+      }
+    },
+    "kuragane_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:kuragane_plushie"
+          }
+        ]
+      }
+    },
+    "laqony_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:laqony_plushie"
+          }
+        ]
+      }
+    },
+    "legendary_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:legendary_plushie"
+          }
+        ]
+      }
+    },
+    "leovinchi454_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:leovinchi454_plushie"
+          }
+        ]
+      }
+    },
+    "lpsoverg_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:lpsoverg_plushie"
+          }
+        ]
+      }
+    },
+    "magucplay_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:magucplay_plushie"
+          }
+        ]
+      }
+    },
+    "margit_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:margit_plushie"
+          }
+        ]
+      }
+    },
+    "mednik0_0_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:mednik0_0_plushie"
+          }
+        ]
+      }
+    },
+    "mentolass_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:mentolass_plushie"
+          }
+        ]
+      }
+    },
+    "meuvam_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:meuvam_plushie"
+          }
+        ]
+      }
+    },
+    "mint_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:mint_plushie"
+          }
+        ]
+      }
+    },
+    "moth_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:moth_plushie"
+          }
+        ]
+      }
+    },
+    "nord_act_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:nord_act_plushie"
+          }
+        ]
+      }
+    },
+    "okroshkrrr_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:okroshkrrr_plushie"
+          }
+        ]
+      }
+    },
+    "prince_vladislav_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:prince_vladislav_plushie"
+          }
+        ]
+      }
+    },
+    "progiple_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:progiple_plushie"
+          }
+        ]
+      }
+    },
+    "raventheprocrastinator_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:raventheprocrastinator_plushie"
+          }
+        ]
+      }
+    },
+    "reznov_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:reznov_plushie"
+          }
+        ]
+      }
+    },
+    "riki_lotiev_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:riki_lotiev_plushie"
+          }
+        ]
+      }
+    },
+    "romaha814_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:romaha814_plushie"
+          }
+        ]
+      }
+    },
+    "samuelchik_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:samuelchik_plushie"
+          }
+        ]
+      }
+    },
+    "savaalienfish_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:savaalienfish_plushie"
+          }
+        ]
+      }
+    },
+    "shadowking21228_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:shadowking21228_plushie"
+          }
+        ]
+      }
+    },
+    "sigma_veb_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:sigma_veb_plushie"
+          }
+        ]
+      }
+    },
+    "soud_puro_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:soud_puro_plushie"
+          }
+        ]
+      }
+    },
+    "sque9e_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:sque9e_plushie"
+          }
+        ]
+      }
+    },
+    "sttcvoid_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:sttcvoid_plushie"
+          }
+        ]
+      }
+    },
+    "tanyaytka_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:tanyaytka_plushie"
+          }
+        ]
+      }
+    },
+    "toazter_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:toazter_plushie"
+          }
+        ]
+      }
+    },
+    "trankler_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:trankler_plushie"
+          }
+        ]
+      }
+    },
+    "undef1ned_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:undef1ned_plushie"
+          }
+        ]
+      }
+    },
+    "veitr_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:veitr_plushie"
+          }
+        ]
+      }
+    },
+    "velder_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:velder_plushie"
+          }
+        ]
+      }
+    },
+    "vorono4ka_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:vorono4ka_plushie"
+          }
+        ]
+      }
+    },
+    "yoshino_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:yoshino_plushie"
+          }
+        ]
+      }
+    },
+    "ysh_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:ysh_plushie"
+          }
+        ]
+      }
+    },
+    "dmh_plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "app:dmh_plushie"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "8sixik_plushie"
+    ],
+    [
+      "aken_yt_plushie"
+    ],
+    [
+      "allman_plushie"
+    ],
+    [
+      "apelsintony_plushie"
+    ],
+    [
+      "arisa_plushie"
+    ],
+    [
+      "aros_plushie"
+    ],
+    [
+      "ballast_plushie"
+    ],
+    [
+      "ctotoh_plushie"
+    ],
+    [
+      "dago_plushie"
+    ],
+    [
+      "dish_plushie"
+    ],
+    [
+      "dr__loptr_plushie"
+    ],
+    [
+      "dushnila_plushie"
+    ],
+    [
+      "dylorix24_plushie"
+    ],
+    [
+      "elifian_plushie"
+    ],
+    [
+      "faldoor_plushie"
+    ],
+    [
+      "faorum_plushie"
+    ],
+    [
+      "gemesfoxes_plushie"
+    ],
+    [
+      "ienumerable_plushie"
+    ],
+    [
+      "justrius_plushie"
+    ],
+    [
+      "just_dude_plushie"
+    ],
+    [
+      "kirilla39_plushie"
+    ],
+    [
+      "klaqbi_plushie"
+    ],
+    [
+      "kriptor71_plushie"
+    ],
+    [
+      "kseouse_plushie"
+    ],
+    [
+      "kuragane_plushie"
+    ],
+    [
+      "laqony_plushie"
+    ],
+    [
+      "legendary_plushie"
+    ],
+    [
+      "leovinchi454_plushie"
+    ],
+    [
+      "lpsoverg_plushie"
+    ],
+    [
+      "magucplay_plushie"
+    ],
+    [
+      "margit_plushie"
+    ],
+    [
+      "mednik0_0_plushie"
+    ],
+    [
+      "mentolass_plushie"
+    ],
+    [
+      "meuvam_plushie"
+    ],
+    [
+      "mint_plushie"
+    ],
+    [
+      "moth_plushie"
+    ],
+    [
+      "nord_act_plushie"
+    ],
+    [
+      "okroshkrrr_plushie"
+    ],
+    [
+      "prince_vladislav_plushie"
+    ],
+    [
+      "progiple_plushie"
+    ],
+    [
+      "raventheprocrastinator_plushie"
+    ],
+    [
+      "reznov_plushie"
+    ],
+    [
+      "riki_lotiev_plushie"
+    ],
+    [
+      "romaha814_plushie"
+    ],
+    [
+      "samuelchik_plushie"
+    ],
+    [
+      "savaalienfish_plushie"
+    ],
+    [
+      "shadowking21228_plushie"
+    ],
+    [
+      "sigma_veb_plushie"
+    ],
+    [
+      "soud_puro_plushie"
+    ],
+    [
+      "sque9e_plushie"
+    ],
+    [
+      "sttcvoid_plushie"
+    ],
+    [
+      "tanyaytka_plushie"
+    ],
+    [
+      "toazter_plushie"
+    ],
+    [
+      "trankler_plushie"
+    ],
+    [
+      "undef1ned_plushie"
+    ],
+    [
+      "veitr_plushie"
+    ],
+    [
+      "velder_plushie"
+    ],
+    [
+      "vorono4ka_plushie"
+    ],
+    [
+      "yoshino_plushie"
+    ],
+    [
+      "ysh_plushie"
+    ],
+    [
+      "dmh_plushie"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "app:plushies/root"
+}

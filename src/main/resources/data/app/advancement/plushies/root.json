@@ -1,0 +1,98 @@
+{
+  "display": {
+    "title": {
+      "text": "Это фанко поп?"
+    },
+    "description": {
+      "text": "Получите свою первую плюшевую игрушку"
+    },
+    "icon": {
+      "id": "app:aros_plushie"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/block/white_wool.png"
+  },
+  "criteria": {
+    "plushie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "app:8sixik_plushie",
+              "app:aken_yt_plushie",
+              "app:allman_plushie",
+              "app:apelsintony_plushie",
+              "app:arisa_plushie",
+              "app:aros_plushie",
+              "app:ballast_plushie",
+              "app:ctotoh_plushie",
+              "app:dago_plushie",
+              "app:dish_plushie",
+              "app:dr__loptr_plushie",
+              "app:dushnila_plushie",
+              "app:dylorix24_plushie",
+              "app:elifian_plushie",
+              "app:faldoor_plushie",
+              "app:faorum_plushie",
+              "app:gemesfoxes_plushie",
+              "app:ienumerable_plushie",
+              "app:justrius_plushie",
+              "app:just_dude_plushie",
+              "app:kirilla39_plushie",
+              "app:klaqbi_plushie",
+              "app:kriptor71_plushie",
+              "app:kseouse_plushie",
+              "app:kuragane_plushie",
+              "app:laqony_plushie",
+              "app:legendary_plushie",
+              "app:leovinchi454_plushie",
+              "app:lpsoverg_plushie",
+              "app:magucplay_plushie",
+              "app:margit_plushie",
+              "app:mednik0_0_plushie",
+              "app:mentolass_plushie",
+              "app:meuvam_plushie",
+              "app:mint_plushie",
+              "app:moth_plushie",
+              "app:nord_act_plushie",
+              "app:okroshkrrr_plushie",
+              "app:prince_vladislav_plushie",
+              "app:progiple_plushie",
+              "app:raventheprocrastinator_plushie",
+              "app:reznov_plushie",
+              "app:riki_lotiev_plushie",
+              "app:romaha814_plushie",
+              "app:samuelchik_plushie",
+              "app:savaalienfish_plushie",
+              "app:shadowking21228_plushie",
+              "app:sigma_veb_plushie",
+              "app:soud_puro_plushie",
+              "app:sque9e_plushie",
+              "app:sttcvoid_plushie",
+              "app:tanyaytka_plushie",
+              "app:toazter_plushie",
+              "app:trankler_plushie",
+              "app:undef1ned_plushie",
+              "app:veitr_plushie",
+              "app:velder_plushie",
+              "app:vorono4ka_plushie",
+              "app:yoshino_plushie",
+              "app:ysh_plushie",
+              "app:dmh_plushie"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plushie"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
